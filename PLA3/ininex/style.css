@@ -1,0 +1,27 @@
+h1 {
+    color: aqua;
+}
+
+p {
+    color: blue;
+    background-color: red;
+}
+
+table {
+    width: 100%;
+    background-color: gainsboro
+}
+
+th {
+    background-color: azure;
+}
+
+#director-davis {
+    color: bisque;
+    background-color: burlywood;
+}
+
+.others-directors {
+    color: white    ;
+    background-color: cornflowerblue;
+}
