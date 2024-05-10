@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    padding: 20px 20px;
+    background-color: rgb(79, 79, 226);
+}
+
+.header  {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.container-content {
+    display: flex;
+    height: 80vh;
+    background-color: rgb(43, 43, 199);
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(194, 194, 247);
+}
+
+.box {
+    width: 300px;
+    height: 182px;
+    background-color: blue;
+    color: white;
+    margin: 10px;
+    padding: 20px 20px;
+    border-radius: 30px;
+}
+
+h1,h2,li {
+    color: white;
+    font-size: 30px;
+}
+
+p,h3 {
+    color: white;
+}
+
+.exercise {
+    background-color: rgb(33, 12, 219);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}

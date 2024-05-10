@@ -1,5 +1,6 @@
 h1 {
     color: aqua;
+    text-align: center;
 }
 
 p {
@@ -9,11 +10,15 @@ p {
 
 table {
     width: 100%;
-    background-color: gainsboro
+    background-color: gainsboro;
 }
 
 th {
     background-color: azure;
+}
+
+td {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #director-davis {

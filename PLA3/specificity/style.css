@@ -1,0 +1,19 @@
+.text {
+    color: red;
+}
+
+body .text {
+    color: green;
+}
+
+p.text {
+    color: orange;
+}
+
+html body p.text {
+    color: purple;
+}
+
+html body .text {
+    color: cyan;
+}

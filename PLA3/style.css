@@ -1,0 +1,48 @@
+* {
+    background-color: bisque;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2,h3,p {
+    text-align: center;
+}
+
+blockquote {
+    text-align: center;
+}
+
+div {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.container {
+    display: flex;
+    grid-gap: 20px;
+    border: none;      
+}
+
+.columns {
+    flex: 1;
+}
+
+.columns li {
+    color: chocolate;
+    font-size: 16px;
+}
+
+.important-tags {
+    text-align: center;
+    list-style: none;
+}
+
+#return-btn {
+    display: flex;
+  margin: 0 auto;
+}
+
+img {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 20%;
+}
