@@ -1,5 +1,4 @@
 * {
-    background-color: bisque;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -45,4 +44,22 @@ img {
     display: flex;
     margin: 0 auto;
     border-radius: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #9004;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    body {
+        background-color: #0904;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: #0094;
+    }
 }

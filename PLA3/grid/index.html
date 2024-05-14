@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="style.css">
+<h1>Diferencies entre flexbox i grid</h1>
+<div class="grid-container">
+    <div class="box">
+        <h2>Flexbox</h2>
+        <ul>
+            <li>Està pensat principalment per organitzar els elements en una sola dimensió (horitzontal o vertical).
+            </li>
+            <li>És ideal per a l'organització d'elements en una línia, com ara una fila o una columna.</li>
+            <li>És molt útil per al disseny responsiu i la reorganització d'elements en funció de la grandària de la
+                pantalla.</li>
+            <li>Flexbox es va introduir abans que Grid.</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>Grid</h2>
+        <ul>
+            <li>S'utilitza per crear una disposició de caixes bidimensional.</li>
+            <li>Permet crear columnes i files de manera simultània, oferint una gran flexibilitat en la disposició
+                d'elements.</li>
+            <li>És perfecte per a la creació de dissenys més complexos, com ara cuadrículas amb múltiples columnes i
+                files, i ofereix un control precís sobre la disposició del contingut.</li>
+        </ul>
+    </div>
+</div>
+<h1>minmax() i repeat()</h1>
+<div class="grid-container">
+    <div class="box">
+        <h2>minmax()</h2>
+        <ul>
+            <li>La funció minmax() estableix un rang permès per a la mida d'un element en una graella CSS o en Flexbox.
+            </li>
+            <li>És especialment útil en combinació amb CSS Grid Layout per definir la mida de les columnes i files,
+                permetent que s'ajustin dinàmicament dins d'un rang establert segons el contingut o el disseny desitjat.
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>repeat()</h2>
+        <ul>
+            <li>S'utilitza per repetir un conjunt de valors en una propietat CSS, com en la definició de columnes o
+                files en CSS Grid Layout.</li>
+            <li>És útil per simplificar l'escriptura de codi i fer-lo més llegible, especialment quan es treballa amb un
+                gran nombre d'elements en una graella.</li>
+        </ul>
+    </div>
+</div>
+<h1>grid-temaplate-columns</h1>
+<p>És una propietat clau en CSS Grid Layout que permet definir la disposició i la mida de les columnes en una graella.
+    Els valors que se li assignen poden ser mides fixes, fraccions de l'espai disponible, mides mínimes o valors
+    flexibles, i es poden especificar en diverses unitats, com píxels, fraccions, percentatges o em.</p>

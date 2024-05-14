@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+.container {
+    border: 2px solid gray;
+    width: 100%;
+}
+
+.container-egg {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    font-size: 30px;
+}
+
+img {
+    width: 50%;
+}
+
+p {
+    margin: 30px 0 30px 0;
+    width: 45%;
+    color: gray;
+}
+
+.container-glass {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.glass-title  {
+    width: 60%;
+}
