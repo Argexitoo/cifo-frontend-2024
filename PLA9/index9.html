@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="styles9.css" rel="stylesheet" type="text/css" />
+  <script src="scripts9.js" type="module"></script>
+  <title>PLA 9 - Nom Cognom</title>
+</head>
+
+<body>
+  <header>
+    <h1>PLA 9: JavaScript avançat i fonaments de TypeScript</h1>
+  </header>
+
+  <!-- Task 1 ---------------------------------------------------------------------------- -->
+  <h2>1. Spread, rest i destructuring objects</h2>
+
+  <p class="question">Expliqueu de manera entenedora per què es produeix aquest error...</p>
+
+  <p>Inicialment, teníem una crida incorrecta amb chooseBetween(artists), la qual cosa provocava errors perquè la funció
+    esperava dos paràmetres específics (artist1 i artist2). Hem corregit això al afegir dos elements de l'array artists,
+    és a dir, artists[0] i artists[1].</p>
+
+  <p class="question">Quin mecanisme s'està aplicant a les dues primeres línies?</p>
+
+  <p>Les dues primeres línies del codi utilitzen la desestructuració en JavaScript. La desestructuració és una característica poderosa de JavaScript que permet extreure valors d'arrays o objectes i assignar-los a variables de manera concisa. Aquesta característica facilita l'accés i l'ús dels valors que es troben dins d'estructures complexes com ara arrays i objectes.</p>
+
+  <!-- Task 2 ---------------------------------------------------------------------------- -->
+  <h2>2. Emmagatzematge local (local storage)</h2>
+  <div class="buttons">
+    <a href="#" class="btn">#800</a>
+    <a href="#" class="btn">#080</a>
+    <a href="#" class="btn">#008</a>
+    <a href="#" class="btn">#880</a>
+    <a href="#" class="btn">#808</a>
+    <a href="#" class="btn">#088</a>
+    <a href="#" class="btn">#888</a>
+  </div>
+
+  <p class="question">
+    Expliqueu de manera entenedora quins són els principals avantatges que ofereix l'emmagatzematge local
+    d'informació.
+  </p>
+
+  <p>
+  <ul>
+    <li>Persistència de les Dades: Les dades emmagatzemades localment romanen disponibles encara que es tanqui la
+      finestra del navegador i es torni a obrir. Això permet als usuaris mantenir la seva configuració i preferències al
+      llarg del temps sense necessitat de reiniciar o configurar de nou les aplicacions.</li>
+    <li>Ràpida Recuperació: Accés ràpid i eficient a les dades des de JavaScript, ja que són accessibles directament al
+      navegador sense necessitat d'interaccions amb servidors externs.</li>
+    <li>Menys Càrrega al Servidor: Redueix la càrrega als servidors al mantenir algunes dades del costat del client.
+      Això és especialment útil per a aplicacions amb una gran quantitat de trànsit o amb una necessitat d'emmagatzemar
+      moltes preferències d'usuari.</li>
+    <li>Millora de l'Experiència d'Usuari: Permet una experiència d'usuari personalitzada i millorada. Exemples inclouen
+      la retenció de configuracions de tema, preferències de visualització o informació de sessió per a una navegació
+      més fluida.</li>
+  </ul>
+  </p>
+
+  <p class="question">Expliqueu de manera molt detallada què fa el codi de cada una d'aquestes parts.</p>
+  <ul>
+    <h2>Part 1</h2>
+    <li>document.querySelector('.buttons'): Aquesta línia busca a l'HTML un element amb la classe CSS .buttons. És
+      probable que sigui un element com una <div> o un altre contenedor que agrupa diversos botons.</li>
+    <li>addEventListener('click', changeBackground): Afegeix un event listener a l'element seleccionat (.buttons).
+      Aquest event listener està configurat per escoltar el tipus d'esdeveniment click. Quan es produeix un clic a
+      qualsevol element dins de .buttons, s'executarà la funció changeBackground.</li>
+    <li>document.querySelectorAll('.btn'): Aquesta línia selecciona tots els elements de l'HTML que tenen la classe
+      .btn. Això pot retornar una col·lecció de diversos elements, com ara botons (button).</li>
+    <li>forEach((b) => (b.style.backgroundColor = b.textContent)): Itera sobre cada element seleccionat amb
+      querySelectorAll('.btn'). Per a cada element b, estableix el color de fons (backgroundColor) amb el contingut de
+      text (textContent) de l'element b. Això significa que el color de fons de cada botó es defineix amb el seu propi
+      text interior.</li>
+  </ul>
+  <h2>Part 2</h2>
+  <ul>
+    <li>function changeBackground(e) { ... }: Aquí es defineix una funció anomenada changeBackground que rep un
+      paràmetre e, que és l'objecte esdeveniment (event object) que es passa quan es dispara un esdeveniment (en aquest
+      cas, un clic).</li>
+    <li>if (e.target.classList.contains('btn')) { ... }: Aquesta condició verifica si l'element que va disparar
+      l'esdeveniment té la classe .btn. Això garanteix que només es realitzi l'acció si l'element clicat és un botó amb
+      aquesta classe.</li>
+    <li>document.body.style.background = e.target.textContent + '6';: Aquí s'estableix el color de fons de tot el cos
+      del document (document.body). El color de fons es defineix concatenant el text contingut a l'element que va
+      disparar l'esdeveniment (e.target.textContent) amb el caràcter '6'. Això pot ser una manera peculiar d'intentar
+      modificar el color de fons (per exemple, si e.target.textContent és "blue", intentaria establir el color de fons
+      com "blue6").</li>
+    <li>saveBackgroundColor();: Aquesta crida de funció intenta desar el color de fons en algun lloc, però la funció en
+      si no està definida en el codi proporcionat. Normalment, aquesta funció hauria de ser definida per gestionar
+      l'emmagatzematge o la gestió del color de fons.</li>
+    <li>e.preventDefault();: Aquesta línia intenta prevenir el comportament per defecte de l'esdeveniment. En aquest
+      cas, podria evitar que l'enllaç o el botó generi una acció predeterminada, com ara seguir un enllaç o enviar un
+      formulari, però només si l'esdeveniment e és un esdeveniment de clic.</li>
+    <li>console.log('Setup done');: Aquesta línia simplement imprimeix "Setup done" al console, indicant que la
+      configuració inicial del codi ha finalitzat i que ara està en execució.</li>
+  </ul>
+
+  <!-- Task 3 -------------------------------------------------------------------------------- -->
+  <h2>3. Classes i mòduls</h2>
+
+  <p class="question">
+    Expliqueu quina és aquesta part i en què es diferencia de la sintaxi que havíem utilitzat fins ara.
+  </p>
+
+  <p>La línia script src="scripts9.js" type="module" dins d'un document HTML indica que el fitxer JavaScript scripts9.js
+    es carrega com un mòdul. Això es fa mitjançant l'atribut type="module". L'atribut defer simplement difereix
+    l'execució dels scripts clàssics fins que el document estigui completament carregat mentre que type="module" ofereix
+    una sèrie de funcionalitats addicionals, com l'ús d'importacions i exportacions, un àmbit propi, i l'execució en
+    mode estricte.</p>
+
+  <p class="question">
+    Expliqueu de manera clara quina sintaxi cal seguir per definir una classe i quina sintaxi s'utilitza després per
+    crear un objecte d'aquesta classe.
+  </p>
+
+  <p>Per definir una classe en JavaScript, utilitzem la paraula clau class seguida pel nom de la classe. Dins de la
+    definició de la classe, podem declarar un constructor (que s'executa quan creem un nou objecte a partir de la
+    classe) i els mètodes que formen part de la classe. </p>
+
+  <h2>Com crear un objecte d'aquesta classe</h2>
+
+  <p>Per crear un objecte a partir d'una classe en JavaScript, s'utilitza la paraula clau new seguida pel nom de la
+    classe i els arguments necessaris per al constructor de la classe. Aquests arguments inicialitzen les propietats de
+    l'objecte. Aquí tens una explicació detallada de la sintaxi necessària per crear un objecte a partir d'una classe.
+  </p>
+  <ul>
+    <ol>
+      <li>Paraula clau new: Indica que estem creant un nou objecte.</li>
+      <li>Nom de la classe: El nom de la classe de la qual estem creant l'objecte.</li>
+      <li>Parèntesis (): Contenen els arguments que es passen al constructor de la classe per inicialitzar les
+        propietats de l'objecte.</li>
+      <p>const albert = new Person('Albert', new Date(1992, 4, 20), 'male', 'programming');</p>
+    </ol>
+  </ul>
+  <h3> Diferència entre una classe i un objecte</h3>
+  <ul>
+    <li>Classe: És una plantilla que defineix les propietats i mètodes d'una entitat, sense tenir valors concrets.
+      Objecte: És una instància específica d'una classe, amb valors concrets per a les seves propietats i capacitat per
+      executar els seus mètodes.</li>
+    <li>Classe: És una plantilla que defineix les propietats i mètodes d'una entitat, sense tenir valors concrets.
+      Objecte: És una instància específica d'una classe, amb valors concrets per a les seves propietats i capacitat per
+      executar els seus mètodes.</li>
+  </ul>
+
+  <!-- Task 4 -------------------------------------------------------------------------------- -->
+  <h2>4. Mapatge d'arrays</h2>
+
+  <p class="question">
+    Expliqueu de manera entenedora quina és la diferència entre les anomenades higher-order functions i les
+    first-order functions.
+  </p>
+
+  <p>la principal diferència entre les first-order functions i les higher-order functions és que les first-order
+    functions poden rebre funcions com a arguments, mentre que les les higher-order functions poden fer això i també
+    retornar-les com a resultat. Aquestes característiques ofereixen flexibilitat i permeten crear codi més modular i
+    reusable en programació funcional.</p>
+
+  <!-- Task 5 -------------------------------------------------------------------------------- -->
+  <h2>5. Més ES6</h2>
+
+  <p class="question">
+    ...trieu una característica de les que apareixen al menú de la part esquerra i feu-ne una explicació amb les
+    vostres paraules i posant-ne exemples...
+  </p>
+
+  <p>Aquí la vostra resposta...</p>
+
+  <!-- Task 6 -------------------------------------------------------------------------------- -->
+  <h2>6. TypeScript</h2>
+
+  <p class="question">...expliqueu la diferència entre aquests dos tipus de llenguatges amb les vostres paraules.</p>
+
+  <h2>Llenguatge de Tipus Dinàmic (Dynamically Typed Language)</h2>
+  <p>En un llenguatge de tipus dinàmic, els tipus de les variables són determinats i verificats en temps d'execució.
+    Això significa que no cal declarar explícitament el tipus de les variables abans d'utilitzar-les, ja que el tipus és
+    associat a les dades en el moment que són assignades.</p>
+  <h2>Llenguatge de Tipus Estàtic (Statically Typed Language):</h2>
+  <p>En un llenguatge de tipus estàtic, els tipus de les variables són verificats en temps de compilació. Això significa
+    que has de declarar explícitament el tipus de cada variable abans d'utilitzar-la i, un cop declarada, no pots
+    canviar el tipus d'aquella variable durant l'execució del programa.</p>
+  <p class="question">
+    ...expliqueu quins són els principals avantatges de fer servir un llenguatge de tipat estàtic com TypeScript per
+    sobre d'un llenguatge de tipat dinàmic com JavaScript.
+  </p>
+
+  <p>Els llenguatges de tipus dinàmic solen oferir més flexibilitat i rapidesa en el desenvolupament, ja que no cal
+    gestionar explícitament els tipus de dades. D'altra banda, els llenguatges de tipus estàtic poden ajudar a detectar
+    errors de tipus durant el temps de compilació, millorant la robustesa i la fiabilitat del codi, però requereixen més
+    especificació i gestió dels tipus.</p>
+
+  <p class="question">
+    ...explicar com funciona a grans trets el procediment per escriure codi TypeScript en un projecte web.
+  </p>
+
+  <h3>N'hi ha prou simplement amb canviar l'extensió dels arxius .js per deixar-los com arxius .ts i llestos?
+  </h3>
+  <p>Canviar l'extensió dels arxius de .js a .ts no és suficient per fer que el codi TypeScript funcioni directament en
+    un navegador web.</p>
+  <h3>Podem enllaçar el nostre document HTML amb un arxiu .ts on hi hagi els nostres scripts escrits en
+    TypeScript? Funcionarà això? Per què?</h3>
+  <p>Sí, podem enllaçar el nostre document HTML amb un arxiu .ts que contingui scripts escrits en TypeScript, però
+    directament no funcionarà en un navegador web sense un procés de compilació prèvia. Podem enllaçar un document HTML
+    amb un fitxer .ts, però necessitem compilar primer el TypeScript a JavaScript abans que el navegador pugui
+    interpretar i executar el codi. Això es fa utilitzant una eina de compilació com el compilador de TypeScript (tsc)
+    per generar fitxers JavaScript que puguin ser referenciats i executats en el navegador.</p>
+  <h3>Si fer-ho com s'indica a la qüestió anterior no funciona, què cal fer per poder escriure codi TypeScript i que
+    la nostra aplicació web sigui capaç d'entendre'l i fer-lo servir?</h3>
+  <ul>
+    <ol>
+      <li>Instal·lar el compilador de TypeScript</li>
+      <li>Escriure el codi TypeScript</li>
+      <li>Configurar el fitxer de configuració</li>
+      <li>Compilar el codi TypeScript</li>
+      <li>Referenciar els fitxers JavaScript des del teu HTML</li>
+    </ol>
+  </ul>
+
+</body>
+
+</html>
