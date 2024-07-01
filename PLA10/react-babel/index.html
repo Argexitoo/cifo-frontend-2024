@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus culpa voluptatem numquam tempora, explicabo ipsam eum, perferendis non laboriosam alias eos distinctio dolores velit quisquam facilis quaerat magni porro nam?
+    Soluta dolore nisi placeat repellendus rerum tenetur fuga sequi consequatur, porro ratione adipisci autem culpa error sit beatae eius veniam modi hic libero quae maxime aperiam id necessitatibus vel. Illum!</p>
+    <div id="content"></div>
+    <h2>Inconvenients SPA</h2>
+    <ul>
+        <li><strong>SEO Limitat:</strong> Les SPA solen carregar tot el contingut de la pàgina mitjançant JavaScript, cosa que pot dificultar la indexació per part dels motors de cerca. Això pot afectar negativament el SEO (Search Engine Optimization), ja que els motors de cerca poden tenir problemes per rastrejar i indexar el contingut generat dinàmicament.</li>
+        <li><strong>Temps de càrrega inicial més llarg:</strong> Les SPA sovint requereixen descarregar una quantitat considerable de JavaScript al principi, la qual cosa pot resultar en un temps de càrrega inicial més llarg. Això pot afectar l'experiència de l'usuari, especialment en dispositius amb connexions lentes.</li>
+        <li><strong>Compatibilitat amb navegadors antic:</strong> Algunes funcionalitats modernes de JavaScript i SPA poden no ser compatibles amb navegadors antics, cosa que pot restringir l'accés a l'aplicació per a usuaris amb dispositius o navegadors no actualitzats.</li>
+    </ul>
+    <h2>Scripts</h2>
+    <p><strong>https://unpkg.com/react@18/umd/react.development.js -></strong>Carrega la llibreria de React</p>
+    <p><strong>https://unpkg.com/react-dom@18/umd/react-dom.development.js -></strong>Carrega la llibreria de React DOM</p>
+    <p><strong>https://unpkg.com/@babel/standalone/babel.min.js -></strong>Carrega babel</p>
+    <h2>Que és un UNPKG</h2>
+    <p>UNPKG és un servei de CDN (Content Delivery Network) que serveix els paquets de npm (Node Package Manager) directament a través de la web. Això permet incloure fàcilment llibreries i paquets de JavaScript en una pàgina web sense necessitat de descarregar i instal·lar els paquets localment.</p>
+
+    <!-- Load React library -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Load our React component -->
+<script src="scripts.js" type="text/babel"></script>
+
+</body>
+</html>
